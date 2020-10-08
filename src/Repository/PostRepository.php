@@ -54,6 +54,11 @@ class PostRepository extends ServiceEntityRepository
         return (new Paginator($qb))->paginate($page);
     }
 
+    public function findFirst(int $page = 1, Tag $tag = null) : Paginator
+    {
+        return (new Paginator());
+    }
+
     /**
      * @return Post[]
      */
